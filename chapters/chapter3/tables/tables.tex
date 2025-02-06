@@ -1,0 +1,188 @@
+\begin{table}[!htbp]
+    \caption{Descriptive statistics of the sample, weighted.}
+    \label{tab:descriptive_stats_weighted}
+    \setlength{\tabcolsep}{1.0em}
+    \renewcommand{\arraystretch}{1.1}
+    \begin{tabularx}{\textwidth}{@{} l|*{4}{>{\centering\arraybackslash}X} @{}}
+        \hline
+                              & All         & Men         & Women       & T or $\chi^2$ Test \\
+        \hline
+        Life satisfaction     & 6.84 (2.27) & 6.80 (2.27) & 6.87 (2.27) & ***                \\
+        Female                & 0.51 (0.50) & -           & -           & -                  \\
+        Age                   & 45.74       & 46.05       & 45.44       & ***                \\
+                              & (10.98)     & (10.82)     & (11.11)     &                    \\
+        Cohabitation          & 0.14 (0.35) & 0.15 (0.35) & 0.14 (0.34) & ***                \\
+        Divorce               & 0.11 (0.31) & 0.11 (0.31) & 0.11 (0.31) & ns                 \\
+        Immigrant             & 0.10 (0.30) & 0.10 (0.30) & 0.10 (0.30) & ns                 \\
+        Minority              & 0.07 (0.26) & 0.07 (0.26) & 0.07 (0.25) & **                 \\
+        Household size        & 3.28 (1.14) & 3.28 (1.13) & 3.28 (1.15) & ns                 \\
+        Number of Children    & 1.11 (0.99) & 1.12 (0.99) & 1.11 (1.10) & ns                 \\
+        Children under 6      & 0.23 (0.42) & 0.23 (0.42) & 0.22 (0.41) & ***                \\
+        Unemployed            & 0.06 (0.24) & 0.06 (0.23) & 0.06 (0.25) & ***                \\
+        Feeling of income     & 0.28 (0.45) & 0.28 (0.45) & 0.28 (0.45) & ns                 \\
+        \textit{Education}    &             &             &             & ***                \\
+        \hspace{0.5cm}Level 1 & 24.10\%     & 22.99\%     & 25.18\%     &                    \\
+        \hspace{0.5cm}Level 2 & 37.12\%     & 38.53\%     & 35.73\%     &                    \\
+        \hspace{0.5cm}Level 3 & 10.17\%     & 10.10\%     & 10.23\%     &                    \\
+        \hspace{0.5cm}Level 4 & 28.61\%     & 28.38\%     & 28.83\%     &                    \\
+        N                     & 180,733     & 85,200      & 95,533      &                    \\
+        \hline
+    \end{tabularx}
+    \begin{flushleft}
+        \small
+        \textit{Notes:} Standard deviations in parentheses. * p < 0.05, ** p < 0.01, *** p < 0.001.
+    \end{flushleft}
+\end{table}
+
+\begin{table}[!htbp]
+    \caption{Educational sorting patterns, weighted.}
+    \label{tab:edu_sorting}
+    \setlength{\tabcolsep}{1.0em}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabularx}{\textwidth}{@{} l|*{5}{>{\centering\arraybackslash}X} @{}}
+        \hline
+        Male/Female & Level 1 & Level 2 & Level 3 & Level 4 & Total \\
+        \hline
+        Level 1     & 62.43\% & 23.99\% & 4.55\%  & 9.04\%  & 100\% \\
+        Level 2     & 17.02\% & 55.47\% & 10.46\% & 17.05\% & 100\% \\
+        Level 3     & 9.49\%  & 33.31\% & 31.57\% & 25.63\% & 100\% \\
+        Level 4     & 6.47\%  & 20.46\% & 8.71\%  & 64.36\% & 100\% \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+{\tiny
+\begin{xltabular}{\textwidth}{@{} l|*{2}{>{\raggedright\arraybackslash}X}|*{2}{>{\raggedright\arraybackslash}X}|*{2}{>{\raggedright\arraybackslash}X} @{}}
+    \caption{DMM on life satisfaction of pooled respondents, weighted.}
+    \label{tab:dmm_pooled} \\
+    \hline
+    & \multicolumn{2}{c|}{Model 1} & \multicolumn{2}{c|}{Model 2} & \multicolumn{2}{c}{Model 3} \\
+    & Men & Women & Men & Women & Men & Women \\
+    \hline
+    \endfirsthead
+    \multicolumn{7}{l}{\tablename\ \thetable{} - continued from previous page} \\
+    \hline
+    & \multicolumn{2}{c|}{Model 1} & \multicolumn{2}{c|}{Model 2} & \multicolumn{2}{c}{Model 3} \\
+    & Men & Women & Men & Women & Men & Women \\
+    \hline
+    \endhead
+    \hline \multicolumn{7}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+    \multicolumn{7}{l}{\textit{Part \RNum{1}: Weight parameters}} \\
+    R's education & 0.62 *** & 0.33 *** & 0.62 *** & 0.33 *** & 0.89 *** & 0.15 \\
+    & (0.04) & (0.04) & (0.04) & (0.04) & (0.08) & (0.10) \\
+    S's education & 0.38 *** & 0.67 *** & 0.38 *** & 0.67 *** & 0.11 & 0.85 *** \\
+    & (0.04) & (0.04) & (0.04) & (0.04) & (0.08) & (0.10) \\[0.3em]
+    \multicolumn{7}{l}{\textit{Part \RNum{2}: Educational sorting indicators}} \\
+    Heterogamy & & & -0.01 & -0.05 ** & & \\
+    & & & (0.01) & (0.01) & & \\
+    Hypergamy & & & & & -0.09 *** & -0.09 *** \\
+    & & & & & (0.03) & (0.03) \\
+    Hypogamy & & & & & 0.07 ** & 0.00 \\
+    & & & & & (0.03) & (0.03) \\[0.3em]
+    \multicolumn{7}{l}{\textit{Part \RNum{3}: Diagonal intercepts}} \\
+    Level 1 & 7.59 *** & 7.86 *** & 7.60 *** & 7.87 *** & 7.61 *** & 7.87 *** \\
+    & (0.07) & (0.07) & (0.07) & (0.07) & (0.07) & (0.07) \\
+    Level 2 & 7.62 *** & 7.99 *** & 7.63 *** & 8.01 *** & 7.63 *** & 8.01 *** \\
+    & (0.07) & (0.07) & (0.07) & (0.07) & (0.07) & (0.07) \\
+    Level 3 & 7.89 *** & 8.23 *** & 7.90 *** & 8.26 *** & 7.88 *** & 8.25 *** \\
+    & (0.08) & (0.07) & (0.08) & (0.07) & (0.08) & (0.07) \\
+    Level 4 & 7.99 *** & 8.27 *** & 7.99 *** & 8.28 *** & 8.00 *** & 8.28 *** \\
+    & (0.07) & (0.06) & (0.07) & (0.07) & (0.07) & (0.07) \\[0.3em]
+    \multicolumn{7}{l}{\textit{Part \RNum{4}: Covariates}} \\
+    Age & -0.14 *** & -0.13 *** & -0.14 *** & -0.13 *** & -0.14 *** & -0.13 *** \\
+    & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) \\
+    Cohabitation & -0.21 *** & -0.32 *** & -0.21 *** & -0.32 *** & -0.21 *** & -0.32 *** \\
+    & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) \\
+    Divorce & -0.16 & -0.13 & -0.16 & -0.13 & -0.16 *** & -0.13 *** \\
+    & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) \\
+    Immigrant & -0.04 & -0.08 ** & -0.04 & -0.08 ** & -0.04 & -0.08 ** \\
+    & (0.03) & (0.02) & (0.03) & (0.02) & (0.03) & (0.02) \\
+    Minority & -0.12 *** & -0.20 *** & -0.12 *** & -0.20 *** & -0.12 *** & -0.20 *** \\
+    & (0.03) & (0.03) & (0.03) & (0.03) & (0.03) & (0.03) \\
+    Household size & 0.05 ** & -0.01 & 0.05 ** & -0.01 & 0.05 ** & -0.01 \\
+    & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) \\
+    Children & -0.07 *** & -0.02 & -0.07 *** & -0.02 & -0.07 *** & -0.02 \\
+    & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) \\
+    Child under 6 & 0.19 *** & 0.21 *** & 0.19 *** & 0.21 *** & 0.19 *** & 0.21 *** \\
+    & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) \\
+    Unemployed & -1.12 *** & -0.76 *** & -1.12 *** & -0.76 *** & -1.12 *** & -0.76 *** \\
+    & (0.03) & (0.03) & (0.03) & (0.03) & (0.03) & (0.03) \\
+    Feeling of income & 0.97 *** & 0.90 *** & 0.97 *** & 0.90 *** & 0.97 *** & 0.90 *** \\
+    & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) & (0.02) \\[0.3em]
+    Country & Included & Included & Included & Included & Included & Included \\
+    Year & Included & Included & Included & Included & Included & Included \\
+    N & 85,200 & 95,533 & 85,200 & 95,533 & 85,200 & 95,533 \\
+    R² (Cragg-Uhler) & 0.22 & 0.21 & 0.22 & 0.21 & 0.22 & 0.21 \\
+    AIC & 422,276 & 476,505 & 422,277 & 476,496 & 422,261 & 476,493 \\
+    LRT & & & ns & *** & *** & *** \\
+\end{xltabular}
+}
+\begin{flushleft}
+    \small
+    \textit{Notes:} Standard errors in parentheses. \\
+    * p < 0.05, ** p < 0.01, *** p < 0.001, ns otherwise.
+\end{flushleft}
+
+{\tiny
+\begin{xltabular}{\textwidth}{@{} l|*{2}{>{\raggedright\arraybackslash}X}|*{2}{>{\raggedright\arraybackslash}X}|*{2}{>{\raggedright\arraybackslash}X}|*{2}{>{\raggedright\arraybackslash}X} @{}}
+    \caption{DMM on life satisfaction of pooled respondents with interaction between educational sorting and the normative climate, weighted.}
+    \label{tab:dmm_inter} \\
+    \hline
+    & \multicolumn{2}{c|}{Model 1} & \multicolumn{2}{c|}{Model 2} & \multicolumn{2}{c|}{Model 3} & \multicolumn{2}{c}{Model 4} \\
+    & Men & Women & Men & Women & Men & Women & Men & Women \\
+    \hline
+    \endfirsthead
+    \multicolumn{9}{l}{\tablename\ \thetable{} - continued from previous page} \\
+    \hline
+    & \multicolumn{2}{c|}{Model 1} & \multicolumn{2}{c|}{Model 2} & \multicolumn{2}{c|}{Model 3} & \multicolumn{2}{c}{Model 4} \\
+    & Men & Women & Men & Women & Men & Women & Men & Women \\
+    \hline
+    \endhead
+    \hline \multicolumn{9}{r}{\textit{Continued on next page}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+    \multicolumn{9}{l}{\textit{Part \RNum{1}: Weight parameters}} \\
+    R's education & 0.59 *** & 0.33 *** & 0.60 *** & 0.35 *** & 0.84 *** & 0.15 & 0.59 *** & 0.17 \\
+    & (0.04) & (0.04) & (0.04) & (0.04) & (0.08) & (0.09) & (0.04) & (0.09) \\
+    S's education & 0.41 *** & 0.67 *** & 0.40 *** & 0.65 *** & 0.16 & 0.85 *** & 0.41 ** & 0.83 *** \\
+    & (0.04) & (0.04) & (0.04) & (0.04) & (0.08) & (0.09) & (0.04) & (0.09) \\[0.3em]
+    \multicolumn{9}{l}{\textit{Part \RNum{2}: Educational sorting indicators}} \\
+    Heterogamy & -0.02 & -0.05 *** & 0.00 & -0.06 ** & & & & \\
+    & (0.01) & (0.01) & (0.02) & (0.02) & & & & \\
+    $\times$ Homo\_H & & & -0.07 & 0.03 & & & & \\
+    & & & (0.05) & (0.05) & & & & \\
+    $\times$ Hyper\_H & & & -0.04 & 0.08 ** & & & & \\
+    & & & (0.03) & (0.03) & & & & \\
+    Hypergamy & & & & & -0.09 ** & -0.10 *** & -0.07 * & -0.12 *** \\
+    & & & & & (0.03) & (0.03) & (0.03) & (0.03) \\
+    $\times$ Homo\_H & & & & & & & -0.07 & 0.06 \\
+    & & & & & & & (0.06) & (0.06) \\
+    $\times$ Hyper\_H & & & & & & & -0.03 & 0.12 *** \\
+    & & & & & & & (0.03) & (0.03) \\
+    Hypogamy & & & & & 0.06 * & 0.00 & 0.08 * & 0.00 \\
+    & & & & & (0.03) & (0.03) & (0.03) & (0.03) \\
+    $\times$ Homo\_H & & & & & & & -0.08 & 0.01 \\
+    & & & & & & & (0.06) & (0.06) \\
+    $\times$ Hyper\_H & & & & & & & -0.06 & 0.05 \\
+    & & & & & & & (0.04) & (0.03) \\[0.3em]
+    \multicolumn{9}{l}{\textit{Part \RNum{3}: Diagonal intercepts (omitted)}} \\
+    \multicolumn{9}{l}{\textit{Part \RNum{4}: Covariates (others omitted)}} \\
+    Homo\_H & -0.29 *** & -0.38 *** & -0.27 *** & -0.39 *** & -0.30 *** & -0.38 *** & -0.28 *** & -0.39 *** \\
+    & (0.04) & (0.04) & (0.05) & (0.04) & (0.04) & (0.04) & (0.05) & (0.04) \\
+    Hyper\_H & -0.60 *** & -0.49 *** & -0.58 *** & -0.53 *** & -0.60 *** & -0.49 *** & -0.58 *** & -0.53 *** \\
+    & (0.03) & (0.03) & (0.04) & (0.03) & (0.03) & (0.03) & (0.04) & (0.03) \\[0.3em]
+    N & 85,200 & 95,533 & 85,200 & 95,533 & 85,200 & 95,533 & 85,200 & 95,533 \\
+    R² (Cragg-Uhler) & 0.22 & 0.21 & 0.22 & 0.21 & 0.22 & 0.21 & 0.22 & 0.21 \\
+    AIC & 422,364 & 476,624 & 422,364 & 476,618 & 422,355 & 476,624 & 422,364 & 476,615 \\
+    LRT & & & ns & ** & & & ns & ** \\
+\end{xltabular}
+}
+\begin{flushleft}
+    \small
+    \textit{Notes:} Standard errors in parentheses. \\
+    * p < 0.05, ** p < 0.01, *** p < 0.001, ns otherwise.
+\end{flushleft}
