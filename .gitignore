@@ -1,0 +1,64 @@
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.ptc
+*.xdv
+
+# Bibliography auxiliary files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+*.bbl-SAVE-ERROR
+
+# Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Intermediate documents
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Generated pdf
+# .pdf
+
+# Mac OS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VSCode specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Backup files
+*~
+*.backup
+*.bak
+*.sav
+
+# Indent files
+*.ind
+indent.log
+
+# Draft watermark
+*.watermark 
