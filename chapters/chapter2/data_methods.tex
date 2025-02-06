@@ -1,0 +1,60 @@
+\section{Data and Methods}
+\label{sec:ch2-data-methods}
+
+\subsection{Data and Sample}
+
+The study selected samples from the China Family Panel Studies (CFPS) in 2010. The CFPS, initiated in 2010, is a biennial survey employing an implicitly stratified, multistage probability strategy to draw samples representative of China's national population \parencite{xieSamplingDesignChina2015}. It contains rich data on sociodemographic characteristics of household members, as well as subjective well-being of focal respondents, making it ideal for the present study on mobility outcomes from an intergenerational perspective. For this analysis, I chose the 2010 baseline wave because it included information on the number of siblings, enabling a straightforward identification of only-child status while minimizing sample loss.
+
+Table~\ref{app:tab:sample_restriction_ch2} shows steps of sample restrictions. For the older generation, I first narrowed down the initial sample of 33,598 respondents to those with only one child, reducing the sample size to 10,261 by 69.46\%. I then selected parents whose child had graduated from school and aged between 20 and 50, further reducing the sample to 3836 by 62.62\%. Finally, I excluded those with missing values, dropping an additional 0.73\%. The final analytic sample of the older generation comprises 3808 parents.
+
+For primary movers, I first restricted the sample to those who were not in school and aged between 20 and 50, reducing the sample size from 33,598 to 18,172 by 45.91\%. I then dropped those with missing values, resulting in a further 9.83\% decrease in sample size. The final analytic sample comprises 16,385 primary movers, of which 1475 were identified as only children. For intergenerational comparisons within only-child families, I present descriptive statistics for only children separately from those for all primary movers in later sections.
+
+\subsection{Measures}
+
+\textbf{Subjective Well-Being.} The dependent variable, subjective well-being, was measured by life satisfaction on a 1 (\textit{very dissatisfied}) to 5 (\textit{very satisfied}) scale: “overall, are you satisfied with life?” It is the most extensively used single-item question for measuring life satisfaction and a reliable indicator of subjective well-being.
+
+\textbf{Educational Mobility.} The measure of intergenerational educational mobility is based on the comparison between parents' and children's absolute educational levels. In the Chinese context, absolute educational credential carries substantial weight in determining individuals' opportunities in the labor market and, as illustrated by \textcite{xuHopingPhoenixShanghai2013}, reflects parents' most intuitive aspiration for upward mobility, regardless of their children's relative standing among peers. Thus, I first categorized respondents' education into four levels: \textit{primary or lower}, \textit{middle school}, \textit{high school}, and \textit{college or higher}. The four-tier classification ensures adequate sample sizes at each level for both generations.
+
+I then measured mobility by comparing the child's education with that of their highest-educated parent, an approach similar to \textcite{schuckDoesIntergenerationalEducational2018} but different from most previous studies that measured the origin by father's status only (e.g., \cite{dhooreSocialMobilityLife2019,kwonImpactIntergenerationalMobility2022,zangFrustratedAchieversSatisfied2016}). I chose this approach for two reasons. First, comparing children's status to the best that their parents have achieved is appropriate to capture the nature of educational mobility as a family project \parencite{guSacrificeIndebtednessIntergenerational2022}. Second, the mother-child status associations have been strengthened as a result of the rising hypogamy \parencite{huGenderEducationExpansion2023}. As in the sample of only children, mothers had higher education than fathers in 16.22\% of relationships in which both parents' education was identified. Thus, identifying parents' education solely by fathers' status may lead to biased measures of intergenerational educational mobility.
+
+Thus, intergenerational educational mobility was identified as \textit{non-mobile} if the child's education matched that of their highest-educated parent, \textit{upward} if higher, and \textit{downward} if lower.
+
+\textbf{Covariates.} I controlled several variables relevant to subjective well-being, including gender (1=\textit{female}, 0 = \textit{male}), age in continuous years, ethnicity (1 = \textit{Han Chinese}, 0 = \textit{non-Han minorities}), marital status (1 = \textit{married}, 0 = \textit{not married}), Communist Party membership (1 = \textit{party member}, 0 = \textit{non-member}), urban status (1 = \textit{urban}, 0 = \textit{rural}), and economic relationship with parents or children (1 = \textit{economically related}, 0 = \textit{not related}). In analyses of all primary movers, I also included only-child status (1 = \textit{only child}, 0 = \textit{non-only child}). Provided that the primary interest is in the overall effects of educational mobility, I did not control variables of potential mediating effects, such as income and employment status.
+
+\subsection{Analytic Strategy}
+
+Since the three components of intergenerational educational mobility—origin, destination, and mobility—are linearly dependent, and any two provide the remaining one, it is statistically challenging to estimate all three simultaneously by conventional linear regressions \parencite{sobelDiagonalMobilityModels1981}. One compromising strategy is to estimate the effects of mobility while controlling for either origin or destination. However, this strategy results in confounded estimations, as well summarized by \textcite{schuckDoesIntergenerationalEducational2018}. For instance, omitting the higher destination status in the case of upward mobility may lead to an overestimation of its positive influence and the neglect of its potential distress \parencite{nikolaevIntergenerationalMobilitySubjective2014}.
+
+The Diagonal Mobility Model (DMM), also known as the Diagonal Reference Model, is a type of nonlinear models capable of modeling origin, destination, and mobility simultaneously and has become the gold standard for mobility research \parencite{sobelDiagonalMobilityModels1981,sobelSocialMobilityFertility1985,zangMobilityEffectsHypothesis2023}. The DMM is informed by the sociological assumption that non-mobile individuals build up the core of their respective social position and, for my research questions, their subjective well-being best represent the characteristics of their respective educational level. Taking this as the starting point, the DMM treats non-mobile individuals as the reference groups and models individuals' life satisfaction as a weighted sum of that of non-mobile individuals at origin and destination. The weights, which sum up to one, denote the relative influence of origin and destination on mobile individuals' subjective well-being, over and above which net mobility effects can be isolated and estimated. The baseline DMM without mobility indicators can be specified as follows:
+
+\begin{equation}
+    \label{eq:dmm-chapter2}
+    \text{Y}_{ijk} = p \mu_{ii} + (1-p) \mu_{jj} + \sum \beta X_{kl} + \epsilon_{ijk}, 0 \leq p \leq 1
+\end{equation}
+
+Here, $Y_{ijk}$ is the life satisfaction of individual $k$ who moved from educational category $i$ to $j$, $\mu_{ii}$ and $\mu_{jj}$ are the life satisfaction of non-mobile individuals in categories $i$ and $j$, respectively, and $\sum \beta X_{kl}$ is a vector of covariates. Weight parameters $p$ and $(1-p)$ capture the relative influence of origin and destination.
+
+Mobility effects can be assessed by adding mobility indicators into the baseline model, which is given by:
+
+\begin{equation}
+    \label{eq:dmm_mobility}
+    \text{Y}_{ijk} = p \mu_{ii} + (1-p) \mu_{jj} + \gamma_{1} U_{k} + \gamma_{2} D_{k} + \sum \beta X_{kl} + \epsilon_{ijk}, 0 \leq p \leq 1
+\end{equation}
+
+Where $U_{k}$ and $D_{k}$ are dummy variables for upward and downward mobility of individual $k$, respectively, $\gamma_{1}$ and $\gamma_{2}$ capture net mobility effects on life satisfaction.
+
+To evaluate the only-child hypothesis, the gender disparity hypothesis, and differences between fathers and mothers, I added interactions terms with the weights of statuses and mobility indicators separately in subsequent models. For example, the models testing the only-child hypothesis are given by:
+
+\begin{equation}
+    \label{eq:dmm_only_child}
+    \text{Y}_{ijk} = (p + p_{o} O_{k}) \mu_{ii} + (1 - p - p_{o} O_{k}) \mu_{jj} + \gamma_{1} U_{k} + \sum \beta X_{kl} +\epsilon_{ijk}, 0 \leq p \leq 1
+\end{equation}
+
+\begin{equation}
+    \label{eq:dmm_only_child_mobility}
+    \text{Y}_{ijk} = p \mu_{ii} + (1-p) \mu_{jj} + \gamma_{uo} U_{k} O_{k} + \gamma_{do} D_{k} O_{k} + \sum \beta X_{kl} + \epsilon_{ijk}, 0 \leq p \leq 1
+\end{equation}
+
+Where $O_{k}$ stands for whether individual $k$ is an only child. The relative influence of origin increases by $p_{o}$ if individual $k$ is an only child, and that of destination decreases by the same amount. Differences in the effects of upward and downward mobility are captured by coefficients $\gamma_{uo}$ and $\gamma_{do}$ in \ref{eq:dmm_only_child_mobility}. Gender differences among only-children and their parents were assessed in similar ways.
+
+The study used the Akaike Information Criterion (AIC) and likelihood ratio tests (LRT) to determine if additional variables lead to significant improvement in fit measures \parencite{sobelSocialMobilityFertility1985}. Models were estimated using the "gnm" package in R \parencite{turnerGnmGeneralizedNonlinear2005}.
