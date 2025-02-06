@@ -1,4 +1,114 @@
 \section{Data and Methods}
 \label{sec:ch4-data-methods}
 
-% Your data and methods content will go here 
+\subsection{Data and Sample}
+
+Our study utilizes micro-level data from the National Population Census of China for the years 1982, 1990, 2000, and 2010. Covering all Chinese citizens residing in mainland China, the Census data is widely regarded as the most comprehensive source of information on the Chinese population, providing us with a large sample size that is immune to sampling bias.
+
+We adopt a birth cohort perspective to capture cohort-specific experiences of mate selection within a rapidly changing historical context \parencite{dongTrendsEducationalAssortative2023}. To do so, we restricted our sample to women aged 25 to 34 for the 1990, 2000, and 2010 Censuses, and slightly adjusted the age range to 27 to 36 for the 1982 Census, thereby covering consecutive, non-overlapping cohorts born between 1946 and 1985. We first constructed a sample including all women, regardless of their marital status, to compute gender-education-specific marriage rates.
+
+We then further restricted the sample to married individuals. To identify married couples within individual-level census data, we relied on each respondent's relationship to their household head. In cases where multiple couples had the same type of relationship (e.g., more than one potential pair between children and children-in-law), we paired them by the year of first marriage, if available. We excluded married individuals whose own or spouse's education was missing or could not be identified. Given that each marriage was identified twice, our analysis focused on female respondents due to their smaller variation in the age of first marriage compared to men.
+
+To calculate men's educational gradients in marriage rates, we also constructed a reference sample of men who would be available to partner with the women in our general sample. Given the average two-year age difference between spouses, we drew a sample of men born between 1944 and 1983, regardless of their marital status. This age range is appropriate for our analysis, as most Chinese individuals have completed their highest education and entered their first marriage by the lower and upper age limits, respectively.
+
+For urban and rural comparisons, we selected a subsample of women within the same age range, born between 1966 and 1985, and a reference sample of men born between 1964 and 1984, from the 2000 and 2010 Censuses, where household registration (\textit{hukou}) information was publicly available. We excluded couples with different \textit{hukou} statuses, which remained consistently uncommon across cohorts, accounting for 4.25\% of the sample \parencite{duTrendsEducationalAssortative2023}. Since retrospective data is not available, we assumed that \textit{hukou} status remained unchanged from the time of marriage to the time of the survey. This assumption is likely valid because \textit{hukou} is a relatively stable social status over one's life course, with few avenues—other than graduating from college or joining the army—to overcome the barriers between urban and rural statuses. Although individuals can also convert \textit{hukou} according to their spouse's \textit{hukou} status after marriage, this is often subject to strict administrative rules. For example, in Beijing, a rural \textit{hukou} holder can only obtain an urban \textit{hukou} through marriage upon turning age 45 with the marriage lasting at least 10 years. As this study focuses on young populations in their mid-20s to mid-30s, respondents in the sample were unlikely to convert their \textit{hukou} through marriage.
+
+We classified the sample into eight five-year cohort groups: the 45s (1946-1950), 50s (1951-1955), 55s (1956-1960), 60s (1961-1965), 65s (1966-1970), 70s (1971-1975), 75s (1976-1980), and 80s (1981-1985). In total, our final analytical sample for the main analysis includes 2,592,528 female respondents born between 1946 and 1985, of whom 2,447,778 were married, along with a reference sample of 2,679,757 men born between 1944 and 1983. For the analysis of urban-rural differences, our final sample includes 1,089,730 female respondents born between 1966 and 1985, among whom 992,698 were married, as well as a reference sample of 1,174,082 men born between 1964 and 1983.
+
+\subsection{Measures}
+
+To identify patterns of marital sorting by education, we first categorized educational attainment into four levels: \textit{primary or less}, \textit{middle school}, \textit{high school}, and \textit{college or above}. While we acknowledge that this classification may obscure some important distinctions—such as sorting between vocational college and university—it ensures a fair distribution of educational levels across cohorts over the course of educational expansion. Moreover, despite the college expansion, post-secondary education still yields greater socioeconomic returns compared to other education levels in China. Thus, our educational categorization reflects meaningful variations in the socioeconomic returns to education.
+
+We then identified marital sorting patterns by constructing marriage matrices for married couples in each cohort group, where the educational attainment of wives is distributed across rows and that of husbands across columns. For example, the matrix of couples from cohort t is given by:
+
+\begin{equation}
+    M_t = \begin{bmatrix}
+        m_{11} & \cdots & m_{1K} \\
+        \vdots & \ddots & \vdots \\
+        m_{K1} & \cdots & m_{KK}
+    \end{bmatrix}, K = 4
+\end{equation}
+
+In this matrix, those in homogamous marriages are positioned on the diagonal, while those in hypergamy and hypogamy are placed above and below the diagonal, respectively. Thus, the probabilities of homogamy, hypergamy, and hypogamy are determined by the sums of the cells on, above, and below the diagonal, respectively:
+
+\begin{align}
+    Y^{W=H}(M_t) & = \sum_{k=1}^K m_{i=k,j=k}                    \\[10pt]
+    Y^{W<H}(M_t) & = \sum_{k=1}^{K-1} \sum_{l=k+1}^K m_{i=k,j=l} \\[10pt]
+    Y^{W>H}(M_t) & = \sum_{k=2}^K \sum_{l=1}^{k-1} m_{i=k,j=l}
+\end{align}
+
+In total, we constructed eight matrices for each cohort group from the 1945s to the 1980s. For the analysis of urban-rural differences, we constructed matrices further differentiated by urban/rural status for each cohort group from the 1965s to the 1980s.
+
+\subsection{Analytical Strategy}
+
+We employed a decomposition approach proposed by \textcite{leeschDecomposingTrendsEducational2023}, which allows for the decomposition of differences in homogamy, hypergamy, and hypogamy rates across cohorts and urban/rural areas into three components: educational expansion, educational gradients in marriage rates, and assortative mating preferences.
+
+More specifically, this approach is based on comparisons between observed outcomes in a given context and counterfactuals created by substituting one of the three aforementioned components with those from another context. For example, a counterfactual scenario might involve educational expansion and educational gradients in marriage rates derived from the 1940s cohorts and assortative mating preferences derived from the 1980s cohorts. By comparing this counterfactual scenario with observed outcomes in the 1940s cohorts, we can estimate how much change in assortative mating preferences alone contributed to the cross-cohort differences.
+
+Mathematically, this is achieved by a two-step dissection of marriage matrices into three components. In the first step, matrix $M_{t}$ can be decomposed into wives' and husbands' educational distributions, represented by the row and column sums of $M_{t}$, respectively, and the odds ratios within $M_{t}$, which represent assortative mating preferences. These are given by:
+
+\begin{equation}
+    E_t^W = \begin{bmatrix}
+        m_{1.} = \sum\limits_{k}^K m_{1k} \\
+        \vdots                            \\
+        m_{K.} = \sum\limits_{k}^K m_{Kk}
+    \end{bmatrix},
+    E_t^H = \begin{bmatrix}
+        m_{.1} = \sum\limits_{k}^K m_{k1} & \cdots & m_{.K} = \sum\limits_{k}^K m_{kK}
+    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+    OR_t = \begin{bmatrix}
+        1      & 1                                           & \cdots & 1                                           \\
+        1      & \frac{m_{22}}{m_{21}}/\frac{m_{12}}{m_{11}} & \cdots & \frac{m_{2K}}{m_{21}}/\frac{m_{1K}}{m_{11}} \\
+        \vdots & \vdots                                      & \ddots & \vdots                                      \\
+        1      & \frac{m_{K2}}{m_{K1}}/\frac{m_{12}}{m_{11}} & \cdots & \frac{m_{KK}}{m_{K1}}/\frac{m_{1K}}{m_{11}}
+    \end{bmatrix}
+\end{equation}
+
+In the second step, married couples' educational distributions further account for variations contributed by educational composition and gradients in marriage rates among the general population. Take the wives' educational distribution $E_{t}^{W}$ as an example, it can be inferred from the educational composition and gradients in marriage rates of all women, denoted by $E_{t}^{F}$ and $G_{t}^{F}$, respectively:
+
+\begin{equation}
+    E_t^W = G_t^F E_t^F \frac{1}{\sum G_t^F E_t^F}, G_t^F = \begin{bmatrix}
+        g_{11} & 0      & 0      \\
+        0      & \ddots & \vdots \\
+        0      & 0      & g_{KK}
+    \end{bmatrix}
+\end{equation}
+
+where $G_{t}^{F}$ is a $K \times K$ matrix with $g_{ii}$ denoting the probabilities of being married for women at educational level $i$. Therefore, matrix $M_{t}$ can be rewritten using the following function:
+
+\begin{equation}
+    M_{t} \underset{x \to \infty}= M(E_{t}^{W}, E_{t}^{H}, OR_{t})
+\end{equation}
+
+Next, we utilized the Iterative Proportional Fitting (IPF) technique to fit counterfactual tables. IPF is a statistical method widely used to adjust a multidimensional matrix iteratively so that its margins match specified totals \parencite{demingLeastSquaresAdjustment1940}. When comparing any two given cohorts, $M_{t1}$ and $M_{t2}$, we swapped either one of the three components—$E_{t}$, $G_{t}$, or $OR_{t}$—and constructed a total of $2^3=8$ factual and counterfactual tables. For instance, the prevalence of homogamy in these tables is given by:
+
+\begin{align}
+    Y^{W=H}_{t_{1}, t_{1}, t_{1}} & = Y^{W=H}(M[E(G^{F}_{t_{1}}, E^{F}_{t_{1}}), E(G^{M}_{t_{1}}, E^{M}_{t_{1}}), OR_{t_{1}}]) \nonumber \\[10pt]
+    Y^{W=H}_{t_{2}, t_{1}, t_{1}} & = Y^{W=H}(M[E(G^{F}_{t_{1}}, E^{F}_{t_{2}}), E(G^{M}_{t_{1}}, E^{M}_{t_{2}}), OR_{t_{1}}]) \nonumber \\[10pt]
+    Y^{W=H}_{t_{1}, t_{2}, t_{1}} & = Y^{W=H}(M[E(G^{F}_{t_{2}}, E^{F}_{t_{1}}), E(G^{M}_{t_{2}}, E^{M}_{t_{1}}), OR_{t_{1}}]) \nonumber \\[10pt]
+    Y^{W=H}_{t_{2}, t_{2}, t_{1}} & = Y^{W=H}(M[E(G^{F}_{t_{2}}, E^{F}_{t_{2}}), E(G^{M}_{t_{2}}, E^{M}_{t_{2}}), OR_{t_{1}}]) \nonumber \\[10pt]
+    Y^{W=H}_{t_{1}, t_{1}, t_{2}} & = Y^{W=H}(M[E(G^{F}_{t_{1}}, E^{F}_{t_{1}}), E(G^{M}_{t_{1}}, E^{M}_{t_{1}}), OR_{t_{2}}]) \nonumber \\[10pt]
+    Y^{W=H}_{t_{2}, t_{1}, t_{2}} & = Y^{W=H}(M[E(G^{F}_{t_{1}}, E^{F}_{t_{2}}), E(G^{M}_{t_{1}}, E^{M}_{t_{2}}), OR_{t_{2}}]) \nonumber \\[10pt]
+    Y^{W=H}_{t_{1}, t_{2}, t_{2}} & = Y^{W=H}(M[E(G^{F}_{t_{2}}, E^{F}_{t_{1}}), E(G^{M}_{t_{2}}, E^{M}_{t_{1}}), OR_{t_{2}}]) \nonumber \\[10pt]
+    Y^{W=H}_{t_{2}, t_{2}, t_{2}} & = Y^{W=H}(M[E(G^{F}_{t_{2}}, E^{F}_{t_{2}}), E(G^{M}_{t_{2}}, E^{M}_{t_{2}}), OR_{t_{2}}])
+\end{align}
+
+Based on these tables, we decomposed the overall difference in homogamy between cohorts $t_{1}$ and $t_{2}$ into:
+
+\begin{align}
+    Y^{W=H}_{t_{2}, t_{2}, t_{2}} - Y^{W=H}_{t_{1}, t_{1}, t_{1}} = {} &
+    \underbrace{\frac{1}{2} (Y^{W=H}_{t_{2}, t_{2}, t_{2}} - Y^{W=H}_{t_{2}, t_{2}, t_{1}} + Y^{W=H}_{t_{1}, t_{1}, t_{2}} - Y^{W=H}_{t_{1}, t_{1}, t_{1}})}_{\text{\scriptsize assortative mating}} \nonumber                                                                                                 \\
+                                                                       & + \underbrace{\frac{1}{2}(Y^{W=H}_{t_{2}, t_{2}, t_{1}} - Y^{W=H}_{t_{1}, t_{1}, t_{1}} + Y^{W=H}_{t_{2}, t_{2}, t_{2}} - Y^{W=H}_{t_{1}, t_{1}, t_{2}})}_{\text{\scriptsize educational expansion + educational gradient}} \nonumber \\[8pt]
+    = {}                                                               & \underbrace{\frac{1}{2} (Y^{W=H}_{t_{2}, t_{2}, t_{2}} - Y^{W=H}_{t_{2}, t_{2}, t_{1}} + Y^{W=H}_{t_{1}, t_{1}, t_{2}} - Y^{W=H}_{t_{1}, t_{1}, t_{1}})}_{\text{\scriptsize assortative mating}} \nonumber                            \\
+                                                                       & + \underbrace{\frac{1}{4}(Y^{W=H}_{t_{2}, t_{2}, t_{1}} - Y^{W=H}_{t_{1}, t_{2}, t_{1}} + Y^{W=H}_{t_{2}, t_{1}, t_{1}} - Y^{W=H}_{t_{1}, t_{1}, t_{1}})}_{\text{\scriptsize educational expansion}} \nonumber                        \\
+                                                                       & + \underbrace{\frac{1}{4}(Y^{W=H}_{t_{2}, t_{2}, t_{2}} - Y^{W=H}_{t_{1}, t_{2}, t_{2}} + Y^{W=H}_{t_{2}, t_{1}, t_{2}} - Y^{W=H}_{t_{1}, t_{1}, t_{2}})}_{\text{\scriptsize educational expansion}} \nonumber                        \\
+                                                                       & + \underbrace{\frac{1}{4}(Y^{W=H}_{t_{1}, t_{2}, t_{1}} - Y^{W=H}_{t_{1}, t_{1}, t_{1}} + Y^{W=H}_{t_{2}, t_{2}, t_{1}} - Y^{W=H}_{t_{2}, t_{1}, t_{1}})}_{\text{\scriptsize educational gradient}} \nonumber                         \\
+                                                                       & + \underbrace{\frac{1}{4}(Y^{W=H}_{t_{1}, t_{2}, t_{2}} - Y^{W=H}_{t_{1}, t_{1}, t_{2}} + Y^{W=H}_{t_{2}, t_{2}, t_{2}} - Y^{W=H}_{t_{2}, t_{1}, t_{2}})}_{\text{\scriptsize educational gradient}}
+\end{align}
+
+Differences in hypergamy and hypogamy across cohorts and urban-rural areas can be decomposed in similar ways.
+
+In the following analyses, we first describe trends in marital sorting by education across cohorts and urban/rural China, followed by changes in educational composition, education-specific marriage rates, and assortative mating preferences, respectively. We then report findings from the decomposition analysis to explain the underlying drivers of changes in marital sorting by education.
