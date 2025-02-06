@@ -1,0 +1,326 @@
+\section{Additional Material for Chapter 3}
+\label{app:chapter3}
+
+% Stepwise sample restrictions
+\begin{table}[H]
+    \caption{Stepwise sample restrictions}
+    \label{app:tab:sample_restriction_ch3}
+    \begin{tabularx}{\textwidth}{@{} l|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2cm} @{}}
+        \hline
+        Step & Sample restriction                                                                                                & N       \\
+        \hline
+        0    & Original sample of Rounds 1--10 of the European Social Survey                                                     & 480,625 \\
+        1    & Select respondents in marriage or cohabitation with an opposite-sex partner living together in the same household & 271,522 \\
+        2    & Select respondents between ages 25 and 65                                                                         & 213,303 \\
+        3    & Drop respondents with missing values                                                                              & 195,523 \\
+        4    & Drop respondents from countries with less than three rounds of data, and those from Israel                        & 180,733 \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% Cluster and country information
+\begin{table}[H]
+    \caption{Cluster, sample size, and survey rounds of each country}
+    \label{app:tab:country_clusters}
+    \begin{tabularx}{\textwidth}{@{} l|l|>{\centering\arraybackslash}p{2cm}|>{\raggedright\arraybackslash}X @{}}
+        \hline
+        Cluster            & Country        & N     & Survey rounds                 \\
+        \hline
+        Anglo-Saxon        & Ireland        & 8710  & 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 \\
+                           & United Kingdom & 7525  & 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 \\
+        \hline
+        Baltic             & Estonia        & 6189  & 10, 9, 8, 7, 6, 5, 4, 3, 2    \\
+                           & Lithuania      & 4413  & 10, 9, 8, 7, 6, 5             \\
+        \hline
+        Central \& Eastern & Bulgaria       & 5525  & 10, 9, 6, 5, 4, 3             \\
+                           & Croatia        & 2616  & 10, 9, 5, 4                   \\
+                           & Czechia        & 8059  & 10, 9, 8, 7, 6, 5, 4, 2, 1    \\
+                           & Hungary        & 6349  & 10, 9, 8, 6, 5, 4, 3, 2, 1    \\
+                           & Poland         & 7463  & 9, 8, 7, 6, 5, 3, 2, 1        \\
+                           & Russia         & 4600  & 8, 6, 5, 4, 3                 \\
+                           & Slovakia       & 4617  & 10, 9, 6, 5, 4, 3, 2          \\
+                           & Slovenia       & 5950  & 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 \\
+                           & Ukraine        & 3657  & 6, 5, 4, 3, 2                 \\
+        \hline
+        Continental        & Austria        & 6927  & 9, 8, 7, 5, 4, 3, 2, 1        \\
+                           & Belgium        & 7986  & 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 \\
+                           & France         & 6419  & 10, 9, 8, 7, 6, 5, 4, 3       \\
+                           & Germany        & 11829 & 9, 8, 7, 6, 5, 4, 3, 2, 1     \\
+                           & Netherlands    & 8537  & 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 \\
+                           & Switzerland    & 7474  & 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 \\
+        \hline
+        Nordic             & Denmark        & 6168  & 9, 7, 6, 5, 4, 3, 2, 1        \\
+                           & Finland        & 8956  & 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 \\
+                           & Iceland        & 1862  & 10, 9, 8, 6, 2                \\
+                           & Norway         & 8060  & 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 \\
+                           & Sweden         & 5312  & 9, 8, 7, 6, 5, 4, 3           \\
+        \hline
+        Southern           & Cyprus         & 2440  & 9, 6, 5, 4, 3                 \\
+                           & Greece         & 4157  & 5, 4, 2, 1                    \\
+                           & Italy          & 4206  & 10, 9, 8, 6, 2, 1             \\
+                           & Portugal       & 6994  & 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 \\
+                           & Spain          & 7715  & 9, 8, 7, 6, 5, 4, 3, 2, 1     \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% Diagonal mobility models on married respondents
+\begin{table}[H]
+    \caption{DMM on life satisfaction of married respondents, weighted}
+    \label{app:tab:dmm_married}
+    \begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+        \hline
+                            & \multicolumn{2}{c}{Model 1} & \multicolumn{2}{c}{Model 2}                      \\
+        \cline{2-5}
+                            & Men                         & Women                       & Men     & Women    \\
+        \hline
+        \multicolumn{5}{l}{\textit{Part \RNum{1}: Weight parameters}}                                        \\
+        R's edu             & 0.85***                     & 0.12                        & 0.80*** & 0.12     \\
+                            & (0.08)                      & (0.10)                      & (0.08)  & (0.10)   \\
+        S's edu             & 0.15                        & 0.88***                     & 0.20**  & 0.88***  \\
+                            & (0.08)                      & (0.10)                      & (0.08)  & (0.10)   \\[1ex]
+        \multicolumn{5}{l}{\textit{Part \RNum{2}: Educational sorting indicators}}                           \\
+        Hypergamy           & -0.09**                     & -0.09**                     & -0.07   & -0.12*** \\
+                            & (0.03)                      & (0.03)                      & (0.03)  & (0.03)   \\
+        $\times$ Homo\_H    &                             &                             & -0.05   & 0.05     \\
+                            &                             &                             & (0.07)  & (0.06)   \\
+        $\times$ Hyper\_H   &                             &                             & 0.02    & 0.09*    \\
+                            &                             &                             & (0.04)  & (0.03)   \\
+        Hypogamy            & 0.05                        & -0.00                       & 0.06    & 0.01     \\
+                            & (0.03)                      & (0.03)                      & (0.04)  & (0.04)   \\
+        $\times$ Homo\_H    &                             &                             & -0.11   & -0.01    \\
+                            &                             &                             & (0.07)  & (0.06)   \\
+        $\times$ Hyper\_H   &                             &                             & -0.07   & 0.06     \\
+                            &                             &                             & (0.04)  & (0.04)   \\[1ex]
+        \multicolumn{5}{l}{\textit{Part \RNum{3}: Diagonal intercepts (omitted)}}                            \\
+        \multicolumn{5}{l}{\textit{Part \RNum{4}: Covariates (omitted)}}                                     \\[1ex]
+        N                   & 70,695                      & 80,831                      & 70,695  & 80,831   \\
+        R$^2$ (Cragg-Uhler) & 0.23                        & 0.22                        & 0.23    & 0.22     \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% Diagonal mobility models on never-divorced respondents
+\begin{table}[H]
+    \caption{DMM on life satisfaction of respondents who had never divorced, weighted}
+    \label{app:tab:dmm_never_divorced}
+    \begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+        \hline
+                            & \multicolumn{2}{c}{Model 1} & \multicolumn{2}{c}{Model 2}                     \\
+        \cline{2-5}
+                            & Men                         & Women                       & Men     & Women   \\
+        \hline
+        \multicolumn{5}{l}{\textit{Part \RNum{1}: Weight parameters}}                                       \\
+        R's edu             & 0.82***                     & 0.34***                     & 0.78*** & 0.28*** \\
+                            & (0.08)                      & (0.10)                      & (0.08)  & (0.09)  \\
+        S's edu             & 0.18*                       & 0.66***                     & 0.22**  & 0.72*** \\
+                            & (0.08)                      & (0.10)                      & (0.08)  & (0.09)  \\[1ex]
+        \multicolumn{5}{l}{\textit{Part \RNum{2}: Educational sorting indicators}}                          \\
+        Hypergamy           & -0.09***                    & -0.05                       & -0.07*  & -0.09** \\
+                            & (0.03)                      & (0.03)                      & (0.03)  & (0.03)  \\
+        $\times$ Homo\_H    &                             &                             & -0.07   & 0.07    \\
+                            &                             &                             & (0.07)  & (0.06)  \\
+        $\times$ Hyper\_H   &                             &                             & 0.01    & 0.11**  \\
+                            &                             &                             & (0.04)  & (0.03)  \\
+        Hypogamy            & 0.05                        & -0.06*                      & 0.05    & -0.07*  \\
+                            & (0.03)                      & (0.03)                      & (0.03)  & (0.03)  \\
+        $\times$ Homo\_H    &                             &                             & -0.04   & 0.05    \\
+                            &                             &                             & (0.06)  & (0.06)  \\
+        $\times$ Hyper\_H   &                             &                             & 0.01    & 0.01    \\
+                            &                             &                             & (0.04)  & (0.04)  \\[1ex]
+        \multicolumn{5}{l}{\textit{Part \RNum{3}: Diagonal intercepts (omitted)}}                           \\
+        \multicolumn{5}{l}{\textit{Part \RNum{4}: Covariates (omitted)}}                                    \\[1ex]
+        N                   & 75,792                      & 85,484                      & 75,792  & 85,484  \\
+        R$^2$ (Cragg-Uhler) & 0.22                        & 0.21                        & 0.22    & 0.21    \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% Diagonal mobility model with 3-level education
+\begin{table}[H]
+    \caption{DMM on life satisfaction of pooled respondents with 3-level education, weighted}
+    \label{app:tab:dmm_3level}
+    {\small
+        \setlength{\tabcolsep}{4pt}  % Reduce column spacing
+        \begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+            \hline
+                                & \multicolumn{2}{c}{Model 1} & \multicolumn{2}{c}{Model 2} & \multicolumn{2}{c}{Model 3}                               \\
+            \cline{2-7}
+                                & Men                         & Women                       & Men                         & Women   & Men     & Women   \\
+            \hline
+            \multicolumn{7}{l}{\textit{Part \RNum{1}: Weight parameters}}                                                                               \\
+            R's education       & 0.60***                     & 0.33***                     & 0.60***                     & 0.33*** & 0.81*** & 0.13    \\
+                                & (0.04)                      & (0.04)                      & (0.04)                      & (0.04)  & (0.08)  & (0.10)  \\
+            S's education       & 0.40***                     & 0.67***                     & 0.40***                     & 0.67*** & 0.19*   & 0.87*** \\
+                                & (0.04)                      & (0.04)                      & (0.04)                      & (0.04)  & (0.08)  & (0.10)  \\[1ex]
+            \multicolumn{7}{l}{\textit{Part \RNum{2}: Educational sorting indicators}}                                                                  \\
+            Heterogamy          &                             &                             & -0.00                       & -0.04** &         &         \\
+                                &                             &                             & (0.01)                      & (0.01)  &         &         \\
+            Hypergamy           &                             &                             &                             &         & -0.07** & -0.10** \\
+                                &                             &                             &                             &         & (0.03)  & (0.03)  \\
+            Hypogamy            &                             &                             &                             &         & 0.07*   & 0.01    \\
+                                &                             &                             &                             &         & (0.03)  & (0.04)  \\[1ex]
+            \multicolumn{7}{l}{\textit{Part \RNum{3}: Diagonal intercepts}}                                                                             \\
+            Level 1             & 7.58***                     & 7.85***                     & 7.58***                     & 7.87*** & 7.59*** & 7.86*** \\
+                                & (0.07)                      & (0.07)                      & (0.07)                      & (0.07)  & (0.07)  & (0.07)  \\
+            Level 2             & 7.62***                     & 7.99***                     & 7.62***                     & 8.00*** & 7.62*** & 8.01*** \\
+                                & (0.07)                      & (0.07)                      & (0.07)                      & (0.07)  & (0.07)  & (0.07)  \\
+            Level 3             & 7.96***                     & 8.25***                     & 7.96***                     & 8.26*** & 7.96*** & 8.26*** \\
+                                & (0.08)                      & (0.07)                      & (0.08)                      & (0.07)  & (0.08)  & (0.07)  \\[1ex]
+            \multicolumn{7}{l}{\textit{Part \RNum{4}: Covariates (omitted)}}                                                                            \\[1ex]
+            N                   & 85,200                      & 95,533                      & 85,200                      & 95,533  & 85,200  & 95,533  \\
+            R$^2$ (Cragg-Uhler) & 0.22                        & 0.21                        & 0.22                        & 0.21    & 0.22    & 0.21    \\
+            AIC                 & 422,283                     & 476,505                     & 422,285                     & 476,497 & 422,277 & 476,497 \\
+            LRT                 &                             &                             & ns                          & **      & **      & **      \\
+            \hline
+        \end{tabularx}
+    }
+\end{table}
+
+% Diagonal mobility model with 5-level education
+\begin{table}[H]
+    \caption{DMM on life satisfaction of pooled respondents with 5-level education, weighted}
+    \label{app:tab:dmm_5level}
+    {\small
+        \setlength{\tabcolsep}{4pt}  % Reduce column spacing
+        \begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+            \hline
+                                & \multicolumn{2}{c}{Model 1} & \multicolumn{2}{c}{Model 2} & \multicolumn{2}{c}{Model 3}                                 \\
+            \cline{2-7}
+                                & Men                         & Women                       & Men                         & Women   & Men      & Women    \\
+            \hline
+            \multicolumn{7}{l}{\textit{Part \RNum{1}: Weight parameters}}                                                                                 \\
+            R's education       & 0.62***                     & 0.28***                     & 0.62***                     & 0.28*** & 0.88***  & 0.04     \\
+                                & (0.04)                      & (0.04)                      & (0.04)                      & (0.04)  & (0.08)   & (0.10)   \\
+            S's education       & 0.38***                     & 0.72***                     & 0.38***                     & 0.72*** & 0.12     & 0.96***  \\
+                                & (0.04)                      & (0.04)                      & (0.04)                      & (0.04)  & (0.08)   & (0.09)   \\[1ex]
+            \multicolumn{7}{l}{\textit{Part \RNum{2}: Educational sorting indicators}}                                                                    \\
+            Heterogamy          &                             &                             & -0.01                       & -0.05** &          &          \\
+                                &                             &                             & (0.01)                      & (0.01)  &          &          \\
+            Hypergamy           &                             &                             &                             &         & -0.08*** & -0.10*** \\
+                                &                             &                             &                             &         & (0.02)   & (0.02)   \\
+            Hypogamy            &                             &                             &                             &         & 0.08**   & 0.01     \\
+                                &                             &                             &                             &         & (0.02)   & (0.03)   \\[1ex]
+            \multicolumn{7}{l}{\textit{Part \RNum{3}: Diagonal intercepts}}                                                                               \\
+            Level 1             & 7.55***                     & 7.72***                     & 7.56***                     & 7.74*** & 7.56***  & 7.72***  \\
+                                & (0.08)                      & (0.08)                      & (0.08)                      & (0.08)  & (0.08)   & (0.07)   \\
+            Level 2             & 7.61***                     & 7.91***                     & 7.61***                     & 7.94*** & 7.62***  & 7.93***  \\
+                                & (0.08)                      & (0.07)                      & (0.08)                      & (0.07)  & (0.08)   & (0.07)   \\
+            Level 3             & 7.62***                     & 7.98***                     & 7.62***                     & 8.00*** & 7.63***  & 8.01***  \\
+                                & (0.07)                      & (0.07)                      & (0.07)                      & (0.07)  & (0.07)   & (0.07)   \\
+            Level 4             & 7.89***                     & 8.22***                     & 7.90***                     & 8.25*** & 7.87***  & 8.23***  \\
+                                & (0.08)                      & (0.07)                      & (0.08)                      & (0.07)  & (0.08)   & (0.07)   \\
+            Level 5             & 7.99***                     & 8.25***                     & 7.99***                     & 8.27*** & 8.00***  & 8.26***  \\
+                                & (0.07)                      & (0.07)                      & (0.07)                      & (0.07)  & (0.07)   & (0.07)   \\[1ex]
+            \multicolumn{7}{l}{\textit{Part \RNum{4}: Covariates (omitted)}}                                                                              \\[1ex]
+            N                   & 85,200                      & 95,533                      & 85,200                      & 95,533  & 85,200   & 95,533   \\
+            R$^2$ (Cragg-Uhler) & 0.22                        & 0.21                        & 0.22                        & 0.21    & 0.22     & 0.21     \\
+            AIC                 & 422,276                     & 476,478                     & 422,278                     & 476,467 & 422,260  & 476,462  \\
+            LRT                 &                             &                             & ns                          & ***     & ***      & ***      \\
+            \hline
+        \end{tabularx}
+    }
+\end{table}
+
+% Diagonal mobility model with interaction between educational sorting and normative climate, 3-level education
+\begin{table}[H]
+    \caption{DMM on life satisfaction of pooled respondents with interaction between educational sorting and the normative climate with 3-level education, weighted}
+    \label{app:tab:dmm_3level_inter}
+    {\tiny
+        \setlength{\tabcolsep}{3pt}  % Further reduce column spacing
+        \begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+            \hline
+                                & \multicolumn{2}{c}{Model 1} & \multicolumn{2}{c}{Model 2} & \multicolumn{2}{c}{Model 3} & \multicolumn{2}{c}{Model 4}                                             \\
+            \cline{2-9}
+                                & Men                         & Women                       & Men                         & Women                       & Men      & Women    & Men      & Women    \\
+            \hline
+            \multicolumn{9}{l}{\textit{Part \RNum{1}: Weight parameters}}                                                                                                                           \\
+            R's education       & 0.57***                     & 0.33***                     & 0.58***                     & 0.35***                     & 0.75***  & 0.12     & 0.75***  & 0.11     \\
+                                & (0.04)                      & (0.04)                      & (0.04)                      & (0.04)                      & (0.09)   & (0.13)   & (0.09)   & (0.13)   \\
+            S's education       & 0.43***                     & 0.67***                     & 0.42***                     & 0.65***                     & 0.25**   & 0.88***  & 0.25**   & 0.89***  \\
+                                & (0.04)                      & (0.04)                      & (0.04)                      & (0.04)                      & (0.09)   & (0.13)   & (0.09)   & (0.11)   \\[1ex]
+            \multicolumn{9}{l}{\textit{Part \RNum{2}: Educational sorting indicators}}                                                                                                              \\
+            Heterogamy          & -0.00                       & -0.04**                     & 0.03                        & -0.03                       &          &          &          &          \\
+                                & (0.01)                      & (0.01)                      & (0.04)                      & (0.04)                      &          &          &          &          \\
+            $\times$ Homo\_H    &                             &                             & -0.06                       & -0.01                       &          &          &          &          \\
+                                &                             &                             & (0.07)                      & (0.06)                      &          &          &          &          \\
+            $\times$ Hyper\_H   &                             &                             & -0.02                       & 0.07**                      &          &          &          &          \\
+                                &                             &                             & (0.03)                      & (0.03)                      &          &          &          &          \\
+            Hypergamy           &                             &                             &                             &                             & -0.06*   & -0.11**  & -0.08    & -0.10    \\
+                                &                             &                             &                             &                             & (0.03)   & (0.04)   & (0.06)   & (0.06)   \\
+            $\times$ Homo\_H    &                             &                             &                             &                             &          &          & 0.04     & -0.02    \\
+                                &                             &                             &                             &                             &          &          & (0.09)   & (0.08)   \\
+            $\times$ Hyper\_H   &                             &                             &                             &                             &          &          & 0.01     & 0.10**   \\
+                                &                             &                             &                             &                             &          &          & (0.04)   & (0.03)   \\
+            Hypogamy            &                             &                             &                             &                             & 0.06     & 0.02     & 0.12*    & 0.03     \\
+                                &                             &                             &                             &                             & (0.03)   & (0.04)   & (0.06)   & (0.06)   \\
+            $\times$ Homo\_H    &                             &                             &                             &                             &          &          & -0.13    & 0.00     \\
+                                &                             &                             &                             &                             &          &          & (0.08)   & (0.08)   \\
+            $\times$ Hyper\_H   &                             &                             &                             &                             &          &          & -0.04    & 0.05     \\
+                                &                             &                             &                             &                             &          &          & (0.04)   & (0.03)   \\[1ex]
+            \multicolumn{9}{l}{\textit{Part \RNum{3}: Diagonal intercepts (omitted)}}                                                                                                               \\
+            \multicolumn{9}{l}{\textit{Part \RNum{4}: Covariates (others omitted)}}                                                                                                                 \\
+            Homo\_H             & -0.03                       & -0.14**                     & -0.01                       & -0.13**                     & -0.03    & -0.14**  & -0.01    & -0.13**  \\
+                                & (0.05)                      & (0.05)                      & (0.05)                      & (0.05)                      & (0.05)   & (0.05)   & (0.05)   & (0.05)   \\
+            Hyper\_H            & -0.64***                    & -0.55***                    & -0.63***                    & -0.58***                    & -0.63*** & -0.55*** & -0.63*** & -0.58*** \\
+                                & (0.03)                      & (0.03)                      & (0.03)                      & (0.03)                      & (0.03)   & (0.03)   & (0.03)   & (0.03)   \\[1ex]
+            N                   & 85,200                      & 95,533                      & 85,200                      & 95,533                      & 85,200   & 95,533   & 85,200   & 95,533   \\
+            R$^2$ (Cragg-Uhler) & 0.22                        & 0.21                        & 0.22                        & 0.21                        & 0.22     & 0.21     & 0.22     & 0.21     \\
+            AIC                 & 422,496                     & 476,800                     & 422,499                     & 476,796                     & 422,493  & 476,799  & 422,497  & 476,797  \\
+            LRT                 &                             &                             & ns                          & *                           &          &          & ns       & *        \\
+            \hline
+        \end{tabularx}
+    }
+\end{table}
+
+% Diagonal mobility model with interaction between educational sorting and normative climate, 5-level education
+\begin{table}[H]
+    \caption{DMM on life satisfaction of pooled respondents with interaction between educational sorting and the normative climate with 5-level education, weighted}
+    \label{app:tab:dmm_5level_inter}
+    {\tiny
+        \setlength{\tabcolsep}{3pt}  % Further reduce column spacing
+        \begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X | >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+            \hline
+                                & \multicolumn{2}{c}{Model 1} & \multicolumn{2}{c}{Model 2} & \multicolumn{2}{c}{Model 3} & \multicolumn{2}{c}{Model 4}                                             \\
+            \cline{2-9}
+                                & Men                         & Women                       & Men                         & Women                       & Men      & Women    & Men      & Women    \\
+            \hline
+            \multicolumn{9}{l}{\textit{Part \RNum{1}: Weight parameters}}                                                                                                                           \\
+            R's education       & 0.59***                     & 0.30***                     & 0.60***                     & 0.32***                     & 0.81***  & 0.11     & 0.81***  & 0.10     \\
+                                & (0.04)                      & (0.04)                      & (0.04)                      & (0.04)                      & (0.08)   & (0.08)   & (0.08)   & (0.08)   \\
+            S's education       & 0.41***                     & 0.70***                     & 0.40***                     & 0.68***                     & 0.19*    & 0.89***  & 0.19*    & 0.80***  \\
+                                & (0.04)                      & (0.04)                      & (0.04)                      & (0.04)                      & (0.08)   & (0.08)   & (0.08)   & (0.08)   \\[1ex]
+            \multicolumn{9}{l}{\textit{Part \RNum{2}: Educational sorting indicators}}                                                                                                              \\
+            Heterogamy          & -0.01                       & -0.05***                    & 0.02                        & -0.04*                      &          &          &          &          \\
+                                & (0.01)                      & (0.01)                      & (0.02)                      & (0.02)                      &          &          &          &          \\
+            $\times$ Homo\_H    &                             &                             & -0.18**                     & -0.06                       &          &          &          &          \\
+                                &                             &                             & (0.05)                      & (0.05)                      &          &          &          &          \\
+            $\times$ Hyper\_H   &                             &                             & -0.05                       & 0.08**                      &          &          &          &          \\
+                                &                             &                             & (0.03)                      & (0.03)                      &          &          &          &          \\
+            Hypergamy           &                             &                             &                             &                             & -0.07**  & -0.10*** & -0.05*   & -0.11*** \\
+                                &                             &                             &                             &                             & (0.02)   & (0.02)   & (0.03)   & (0.03)   \\
+            $\times$ Homo\_H    &                             &                             &                             &                             &          &          & -0.11    & -0.00    \\
+                                &                             &                             &                             &                             &          &          & (0.07)   & (0.06)   \\
+            $\times$ Hyper\_H   &                             &                             &                             &                             &          &          & -0.01    & 0.12***  \\
+                                &                             &                             &                             &                             &          &          & (0.03)   & (0.03)   \\
+            Hypogamy            &                             &                             &                             &                             & 0.06*    & 0.00     & 0.09**   & 0.03     \\
+                                &                             &                             &                             &                             & (0.03)   & (0.03)   & (0.03)   & (0.03)   \\
+            $\times$ Homo\_H    &                             &                             &                             &                             &          &          & -0.26*** & -0.12    \\
+                                &                             &                             &                             &                             &          &          & (0.07)   & (0.06)   \\
+            $\times$ Hyper\_H   &                             &                             &                             &                             &          &          & -0.09*   & 0.05     \\
+                                &                             &                             &                             &                             &          &          & (0.04)   & (0.03)   \\[1ex]
+            \multicolumn{9}{l}{\textit{Part \RNum{3}: Diagonal intercepts (omitted)}}                                                                                                               \\
+            \multicolumn{9}{l}{\textit{Part \RNum{4}: Covariates (others omitted)}}                                                                                                                 \\
+            Homo\_H             & -0.28***                    & -0.32***                    & -0.21***                    & -0.30***                    & -0.28*** & -0.32*** & -0.21*** & -0.30*** \\
+                                & (0.04)                      & (0.04)                      & (0.05)                      & (0.04)                      & (0.04)   & (0.04)   & (0.05)   & (0.04)   \\
+            Hyper\_H            & -0.68***                    & -0.57***                    & -0.67***                    & -0.60***                    & -0.68*** & -0.57*** & -0.67*** & -0.61*** \\
+                                & (0.03)                      & (0.03)                      & (0.04)                      & (0.03)                      & (0.03)   & (0.03)   & (0.04)   & (0.04)   \\[1ex]
+            N                   & 85,200                      & 95,533                      & 85,200                      & 95,533                      & 85,200   & 95,533   & 85,200   & 95,533   \\
+            R$^2$ (Cragg-Uhler) & 0.22                        & 0.21                        & 0.22                        & 0.21                        & 0.22     & 0.21     & 0.22     & 0.21     \\
+            AIC                 & 422,313                     & 476,590                     & 422,364                     & 476,618                     & 422,305  & 476,586  & 422,294  & 476,574  \\
+            LRT                 &                             &                             & **                          & **                          &          &          & ***      & ***      \\
+            \hline
+        \end{tabularx}
+    }
+\end{table}
+
