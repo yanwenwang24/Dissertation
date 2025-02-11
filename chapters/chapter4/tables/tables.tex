@@ -1,0 +1,137 @@
+% Descriptive statistics of the sample
+\begin{table}[H]
+    \caption{Descriptive Statistics}
+    \label{tab:trust-descriptive-stats}
+    \setlength{\tabcolsep}{1.0em}
+    \renewcommand{\arraystretch}{1.1}
+    \begin{tabularx}{\textwidth}{@{} l|*{3}{>{\centering\arraybackslash}X} @{}}
+        \hline
+                                    & Men           & Women         & T-Test    \\
+        \hline
+        Life satisfaction           & 4.09 (0.92)   & 4.11 (0.94)   & -1.41     \\
+        Happiness                   & 7.63 (2.05)   & 7.59 (2.14)   & 0.90      \\
+        Depression                  & 31.67 (7.41)  & 33.83 (7.99)  & -16.57*** \\
+        Generalized trust           & 2.08 (2.09)   & 1.74 (2.06)   & 9.82***   \\
+        Particularized trust        & 8.13 (140)    & 7.97 (1.48)   & 6.51***   \\
+        Marital satisfaction        & 4.68 (0.66)   & 4.43 (0.88)   & 19.18***  \\
+        Interpersonal relationship  & 7.13 (1.92)   & 7.21 (2.00)   & -2.42*    \\
+        Age                         & 49.24 (12.87) & 47.38 (12.63) & 8.60***   \\
+        Number of children          & 1.38 (0.89)   & 1.38 (0.89)   & --        \\
+        Household income per capita & 13035 (18925) & 13035 (18925) & --        \\
+        Education (years)           & 8.03 (4.05)   & 6.35 (4.68)   & 22.66***  \\
+        Marriage duration (years)   & 25.30 (13.04) & 25.30 (13.04) & --        \\
+        \hline
+    \end{tabularx}
+    \begin{flushleft}
+        \small
+        \textit{Note:} Standard deviations are presented in parentheses. Between-gender differences are assessed by T-tests. Data includes 6,964 pairs of married couples selected from the China Family Panel Studies in 2014 and 2018.
+    \end{flushleft}
+\end{table}
+
+% APIMs on Couples' Subjective Well-Being
+\begin{table}[H]
+    \caption{APIMs on Couples' Subjective Well-Being}
+    \label{tab:apim-results}
+    \setlength{\tabcolsep}{1.0em}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabularx}{\textwidth}{@{} l|*{3}{>{\centering\arraybackslash}X} @{}}
+        \hline
+                                        & Life satisfaction & Happiness & Depression \\
+        \hline
+        \multicolumn{4}{l}{\textit{Particularized trust}}                            \\
+        Actor (men$\rightarrow$men)     & 0.06***           & 0.06***   & -0.11***   \\
+        Actor (women$\rightarrow$women) & 0.05**            & 0.02      & -0.07***   \\
+        Partner (women$\rightarrow$men) & 0.02              & 0.03      & -0.03*     \\
+        Partner (men$\rightarrow$women) & 0.03*             & 0.04**    & -0.04**    \\
+        \multicolumn{4}{l}{\textit{Generalized trust}}                               \\
+        Actor (men$\rightarrow$men)     & -0.00             & -0.00     & -0.04**    \\
+        Actor (women$\rightarrow$women) & -0.00             & -0.02     & -0.00      \\
+        Partner (women$\rightarrow$men) & 0.01              & -0.00     & 0.00       \\
+        Partner (men$\rightarrow$women) & -0.00             & 0.01      & -0.01      \\
+        \hline
+    \end{tabularx}
+    \begin{flushleft}
+        \small
+        \textit{Note:} Data includes 6,964 pairs of married couples selected from the China Family Panel Studies in 2014 and 2018.
+    \end{flushleft}
+\end{table}
+
+% APIMeMs on Couples' Subjective Well-Being Mediated by Marital Satisfaction
+\begin{table}[H]
+    \caption{APIMeMs on Couples' Subjective Well-Being Mediated by Marital Satisfaction}
+    \label{tab:apimem-ms-results}
+    \setlength{\tabcolsep}{1.0em}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabularx}{\textwidth}{@{} l|*{3}{>{\centering\arraybackslash}X} @{}}
+        \hline
+                                           & Life Satisfaction & Happiness & Depression \\
+        \hline
+        \multicolumn{4}{l}{\textit{Particularized trust}}                               \\
+        Actor effect                       & 0.05***           & 0.04***   & -0.10***   \\
+        \hspace{0.5cm}Indirect effect (IE) & 0.02***           & 0.01***   & -0.02***   \\
+        \hspace{1cm}Actor-actor IE         & 0.01***           & 0.01**    & -0.02***   \\
+        \hspace{1cm}Partner-partner IE     & 0.00*             & 0.00*     & -0.04***   \\
+        \hspace{0.5cm}Direct effect        & 0.04***           & 0.03**    & -0.07***   \\
+        Partner effect                     & 0.02*             & 0.03***   & -0.04***   \\
+        \hspace{0.5cm}Indirect effect (IE) & 0.01***           & 0.01**    & -0.02***   \\
+        \hspace{1cm}Actor-partner IE       & 0.00***           & 0.00**    & -0.01***   \\
+        \hspace{1cm}Partner-actor IE       & 0.01**            & 0.01*     & -0.01***   \\
+        \hspace{0.5cm}Direct effect        & 0.01              & 0.03**    & -0.02*     \\
+        \multicolumn{4}{l}{\textit{Generalized trust}}                                  \\
+        Actor effect                       & -0.00             & -0.02     & -0.01      \\
+        \hspace{0.5cm}Indirect effect (IE) & 0.01              & -0.01**   & 0.00       \\
+        \hspace{1cm}Actor-actor IE         & -0.01             & -0.01**   & 0.00*      \\
+        \hspace{1cm}Partner-partner IE     & 0.00              & 0.00      & -0.00      \\
+        \hspace{0.5cm}Direct effect        & 0.00              & -0.01     & -0.02      \\
+        Partner effect                     & 0.00              & -0.00     & 0.00       \\
+        \hspace{0.5cm}Indirect effect (IE) & 0.00              & -0.00     & 0.00       \\
+        \hspace{1cm}Actor-partner IE       & -0.00             & -0.00**   & 0.00*      \\
+        \hspace{1cm}Partner-actor IE       & 0.00              & 0.00      & -0.00      \\
+        \hspace{0.5cm}Direct effect        & 0.00              & -0.00     & -0.00      \\
+        \hline
+    \end{tabularx}
+    \begin{flushleft}
+        \small
+        \textit{Note:} Data includes 6,964 pairs of married couples selected from the China Family Panel Studies in 2014 and 2018.
+    \end{flushleft}
+\end{table}
+
+% APIMeMs on Couples' Subjective Well-Being Mediated by Interpersonal Relationships
+\begin{table}[H]
+    \caption{APIMeMs on Couples' Subjective Well-Being Mediated by Interpersonal Relationships}
+    \label{tab:apimem-ir-results}
+    \setlength{\tabcolsep}{1.0em}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabularx}{\textwidth}{@{} l|*{3}{>{\centering\arraybackslash}X} @{}}
+        \hline
+                                           & Life Satisfaction & Happiness & Depression \\
+        \hline
+        \multicolumn{4}{l}{\textit{Particularized trust}}                               \\
+        Actor effect                       & 0.05***           & 0.04***   & -0.10***   \\
+        \hspace{0.5cm}Indirect effect (IE) & 0.02***           & 0.04***   & -0.02***   \\
+        \hspace{1cm}Actor-actor IE         & 0.02***           & 0.03***   & -0.01***   \\
+        \hspace{1cm}Partner-partner IE     & 0.00**            & 0.00**    & -0.00**    \\
+        \hspace{0.5cm}Direct effect        & 0.04***           & 0.00      & -0.07***   \\
+        Partner effect                     & 0.02*             & 0.04***   & -0.04***   \\
+        \hspace{0.5cm}Indirect effect (IE) & 0.01***           & 0.02***   & -0.01***   \\
+        \hspace{1cm}Actor-partner IE       & 0.00***           & 0.00**    & -0.05***   \\
+        \hspace{1cm}Partner-actor IE       & 0.01**            & 0.02***   & -0.01***   \\
+        \hspace{0.5cm}Direct effect        & 0.01              & 0.02      & -0.03**    \\
+        \multicolumn{4}{l}{\textit{Generalized trust}}                                  \\
+        Actor effect                       & -0.00             & -0.02     & -0.01      \\
+        \hspace{0.5cm}Indirect effect (IE) & 0.01**            & 0.01*     & -0.00**    \\
+        \hspace{1cm}Actor-actor IE         & 0.00**            & 0.01*     & -0.00**    \\
+        \hspace{1cm}Partner-partner IE     & 0.00              & 0.00      & -0.00      \\
+        \hspace{0.5cm}Direct effect        & -0.01             & -0.03**   & -0.01      \\
+        Partner effect                     & 0.00              & -0.00     & 0.00       \\
+        \hspace{0.5cm}Indirect effect (IE) & 0.00              & 0.00      & -0.00      \\
+        \hspace{1cm}Actor-partner IE       & 0.00*             & 0.00      & -0.00*     \\
+        \hspace{1cm}Partner-actor IE       & 0.00              & 0.00      & -0.00      \\
+        \hspace{0.5cm}Direct effect        & 0.00              & -0.01     & 0.00       \\
+        \hline
+    \end{tabularx}
+    \begin{flushleft}
+        \small
+        \textit{Note:} Data includes 6,964 pairs of married couples selected from the China Family Panel Studies in 2014 and 2018.
+    \end{flushleft}
+\end{table}
